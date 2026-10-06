@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Amour Cafe & Restaurant | Premier Dining & Private Cabins in Tarkulwa, Deoria</title>
+  
+  <!-- SEO & Social Meta -->
+  <meta name="description" content="Experience romantic private cabins, gourmet cuisine, and artisanal coffee at Amour Cafe & Restaurant, Balpur Road, Tarkulwa, Deoria. Rated 5.0★ with 200+ reviews.">
+  <meta name="keywords" content="Amour Cafe, Amour Restaurant Tarkulwa, Private cabin cafe Tarkulwa, Restaurant near Power House Tarkulwa, Birthday party restaurant Deoria, Fine dining Tarkulwa">
+  <meta name="author" content="Amour Cafe & Restaurant">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Amour Cafe & Restaurant | Tarkulwa, Deoria">
+  <meta property="og:description" content="Luxury dining, romantic private cabins, artisanal cafe beverages, and royal North Indian feasts. Rated 5.0★">
+  <meta property="og:image" content="images/hero_ambience.jpg">
+  <meta property="og:type" content="restaurant.restaurant">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+  <!-- Google Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Cache-Busted Stylesheet -->
+  <link rel="stylesheet" href="styles.css?v=8.0">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Amour Cafe & Restaurant",
+    "image": [
+      "images/hero_ambience.jpg",
+      "images/private_cabin.jpg",
+      "images/interior_dining.jpg"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Balpur Shrinagar, Balpur Road, Near Power House",
+      "addressLocality": "Tarkulwa",
+      "postalCode": "274408",
+      "addressRegion": "Deoria",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 26.6374995,
+      "longitude": 83.897364
+    },
+    "url": "https://www.justdial.com/Deoria/Amour-Cafe-Restaurant-Near-Power-House-Tarkulwa/9999P5568-5568-250211125038-L9H3_BZDET",
+    "telephone": "+919999999999",
+    "servesCuisine": ["North Indian", "Chinese", "Fast Food", "Artisanal Cafe", "Beverages"],
+    "priceRange": "₹₹",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "203",
+      "bestRating": "5"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="light-theme">
+
+  <!-- Header Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo">
+        <img src="images/logo.jpg" alt="Amour Cafe Logo" class="brand-img" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <span class="brand-name">AMOUR</span>
+          <span class="brand-tagline">CAFE & RESTAURANT</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">Our Heritage</a>
+        <a href="#experiences" class="nav-link">Private Cabins</a>
+        <a href="#gastronomy" class="nav-link">Signature Cuisine</a>
+        <a href="#gallery" class="nav-link">Atmosphere</a>
+        <a href="#reviews" class="nav-link">Praise <span class="badge-rating">5.0 ★</span></a>
+        <a href="#contact" class="nav-link">Contact & Directions</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-gold-sm nav-reserve-btn" onclick="openReservationModal()">
+          <i class="fa-solid fa-calendar-check"></i> <span>Book Table</span>
+        </button>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Ambient Cinematic Video Background -->
+  <section class="hero-section" id="hero">
+    <!-- Video Background Container -->
+    <div class="hero-video-wrapper">
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline 
+        poster="images/hero_ambience.jpg" 
+        class="hero-bg-video" 
+        id="heroBgVideo">
+        <source src="videos/hero_video.mp4" type="video/mp4">
+      </video>
+      <div class="hero-video-overlay"></div>
+    </div>
+
+    <!-- Video Play/Pause Toggle -->
+    <button class="video-control-btn" id="videoControlBtn" onclick="toggleHeroVideo()" aria-label="Toggle Background Video">
+      <i class="fa-solid fa-pause" id="videoControlIcon"></i>
+      <span class="video-control-text" id="videoControlText">Video</span>
+    </button>
+
+    <div class="container hero-content">
+      <div class="hero-badge-pill">
+        <i class="fa-solid fa-crown text-gold"></i>
+        <span>Tarkulwa's Premier Dining Sanctuary • 5.0★ Rated</span>
+      </div>
+
+      <h1 class="hero-title">
+        Where Romance, Elegance & <span class="gold-gradient">Flavor Converge</span>
+      </h1>
+
+      <p class="hero-description">
+        Step into Tarkulwa's most distinguished dining destination. Experience intimate private cabins, celebration banquets, artisanal coffees, and mastercrafted cuisine.
+      </p>
+
+      <!-- Highlights (Responsive 2x2 grid on mobile) -->
+      <div class="hero-highlights">
+        <div class="highlight-item">
+          <i class="fa-solid fa-heart"></i>
+          <span>Private Cabins</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fa-solid fa-cake-candles"></i>
+          <span>Party & Birthday Decor</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fa-solid fa-leaf"></i>
+          <span>Pure Veg Quality</span>
+        </div>
+        <div class="highlight-item">
+          <i class="fa-solid fa-gem"></i>
+          <span>Luxury Ambience</span>
+        </div>
+      </div>
+
+      <!-- Prestige Stats Grid -->
+      <div class="hero-stats">
+        <div class="stat-box">
+          <span class="stat-number">5.0<small>★</small></span>
+          <span class="stat-label">Google Rating</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-number">200+</span>
+          <span class="stat-label">Guest Reviews</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Hygiene Assured</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-box">
+          <span class="stat-number">#1</span>
+          <span class="stat-label">In Tarkulwa</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage & Philosophy Section (Clean White) -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images-wrapper reveal-on-scroll">
+          <div class="about-img-card main-img">
+            <img src="images/hero_ambience.jpg" alt="Amour Cafe Restaurant Interior" loading="lazy">
+            <div class="img-badge">
+              <span class="badge-num">5.0 ★</span>
+              <span class="badge-txt">Excellence in Hospitality</span>
+            </div>
+          </div>
+          <div class="about-img-card sub-img">
+            <img src="images/private_cabin.jpg" alt="Amour Private Dining Cabin" loading="lazy">
+            <div class="sub-img-caption">
+              <i class="fa-solid fa-lock"></i> Secluded Private Cabins
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-on-scroll reveal-delay-2">
+          <div class="section-tag">OUR PHILOSOPHY</div>
+          <h2 class="section-title">A Symphony of Warmth, Privacy & Fine Gastronomy</h2>
+          <p class="section-text">
+            Conceived as an oasis of refined dining on Balpur Road near the Power House, <strong>Amour Cafe & Restaurant</strong> brings metropolitan cafe elegance and royal North Indian culinary heritage to Tarkulwa.
+          </p>
+          <p class="section-text">
+            Whether welcoming couples seeking acoustic privacy in secluded cabins, families gathering over rich slow-simmered gravies, or friends celebrating milestone birthdays, every encounter at Amour is crafted with care.
+          </p>
+
+          <div class="philosophy-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-mug-hot"></i></div>
+              <div class="pillar-text">
+                <h4>Signature Brews & Shakes</h4>
+                <p>Artisanal cold coffees, frappes, and refreshing coolers prepared with select ingredients.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-utensils"></i></div>
+              <div class="pillar-text">
+                <h4>Culinary Craftsmanship</h4>
+                <p>From clay-oven naans and rich paneer specialties to crispy stone-baked style pizzas.</p>
+              </div>
+            </div>
+            <div class="pillar-item">
+              <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="pillar-text">
+                <h4>Impeccable Hygiene & Care</h4>
+                <p>Stringent kitchen sanitization, fresh local produce, and warm, courteous staff.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta-row">
+            <button class="btn btn-gold" onclick="openReservationModal()">
+              <i class="fa-solid fa-calendar-check"></i> Reserve Your Table
+            </button>
+            <div class="location-brief">
+              <i class="fa-solid fa-location-dot text-gold"></i>
+              <div>
+                <strong>Balpur Shrinagar</strong>
+                <span>Near Power House, Tarkulwa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Experiences (Cabins, Parties, Family Lounge) -->
+  <section class="section experiences-section" id="experiences">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="section-tag">CURATED EXPERIENCES</div>
+        <h2 class="section-title">Designed for Every Memorable Occasion</h2>
+        <p class="section-subtitle">
+          From tranquil privacy for couples to grand festive setups for birthdays and anniversaries.
+        </p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Experience 1: Private Dining Cabins -->
+        <div class="experience-card reveal-on-scroll reveal-delay-1">
+          <div class="experience-img-container">
+            <img src="images/private_cabin.jpg" alt="Private Dining Cabin Booth at Amour Cafe" loading="lazy">
+            <span class="experience-pill"><i class="fa-solid fa-crown"></i> Signature Feature</span>
+          </div>
+          <div class="experience-body">
+            <h3><i class="fa-solid fa-user-group text-gold"></i> Private Dining Cabins</h3>
+            <p>Designed for guests who treasure quiet conversations and intimate moments. Our secluded cabins offer subtle ambient lighting, acoustic comfort, and dedicated personal service.</p>
+            <ul class="exp-features">
+              <li><i class="fa-solid fa-check"></i> Complete privacy & discrete seating</li>
+              <li><i class="fa-solid fa-check"></i> Warm neon & ambient candlelight mood</li>
+              <li><i class="fa-solid fa-check"></i> Ideal for couples and close conversations</li>
+            </ul>
+            <button class="btn btn-outline-gold btn-block" onclick="openReservationModal('Private Dining Cabin')">
+              Book Private Cabin
+            </button>
+          </div>
+        </div>
+
+        <!-- Experience 2: Birthday & Milestone Parties -->
+        <div class="experience-card reveal-on-scroll reveal-delay-2">
+          <div class="experience-img-container">
+            <img src="images/hero_ambience.jpg" alt="Celebration Decor Setup at Amour Cafe" loading="lazy">
+            <span class="experience-pill party-pill"><i class="fa-solid fa-sparkles"></i> Custom Celebrations</span>
+          </div>
+          <div class="experience-body">
+            <h3><i class="fa-solid fa-cake-candles text-gold"></i> Birthday & Milestone Parties</h3>
+            <p>Make every celebration unforgettable. Our team crafts customized balloon arches, LED letters, surprise table settings, custom cakes, and music playlists for your loved ones.</p>
+            <ul class="exp-features">
+              <li><i class="fa-solid fa-check"></i> Elegant balloon & neon backdrops</li>
+              <li><i class="fa-solid fa-check"></i> Pre-arranged celebration cake service</li>
+              <li><i class="fa-solid fa-check"></i> Curated party platter menus</li>
+            </ul>
+            <button class="btn btn-outline-gold btn-block" onclick="openReservationModal('Birthday / Anniversary Setup')">
+              Arrange Celebration
+            </button>
+          </div>
+        </div>
+
+        <!-- Experience 3: Spacious Family Lounge -->
+        <div class="experience-card reveal-on-scroll reveal-delay-3">
+          <div class="experience-img-container">
+            <img src="images/interior_dining.jpg" alt="Spacious Family Dining Lounge Amour Cafe" loading="lazy">
+            <span class="experience-pill"><i class="fa-solid fa-users"></i> Family Dining</span>
+          </div>
+          <div class="experience-body">
+            <h3><i class="fa-solid fa-people-roof text-gold"></i> Family Lounge & Kitty Banquets</h3>
+            <p>A welcoming, refined environment tailored for family lunches, celebratory dinners, and get-togethers. Spacious seating with high comfort and gracious service.</p>
+            <ul class="exp-features">
+              <li><i class="fa-solid fa-check"></i> Ample seating for large families & groups</li>
+              <li><i class="fa-solid fa-check"></i> Pure vegetarian banquet specialties</li>
+              <li><i class="fa-solid fa-check"></i> Safe, polite, and family-oriented ambience</li>
+            </ul>
+            <button class="btn btn-outline-gold btn-block" onclick="openReservationModal('Family Lounge Table')">
+              Reserve Family Table
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Gastronomy (Editorial Showcase of Culinary Pillars) -->
+  <section class="section gastronomy-section" id="gastronomy">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="section-tag">CULINARY EXCELLENCE</div>
+        <h2 class="section-title">The Amour Gastronomy Collection</h2>
+        <p class="section-subtitle">
+          A masterclass in taste and hygiene. Crafted fresh with uncompromised ingredients and culinary passion.
+        </p>
+      </div>
+
+      <div class="gastronomy-grid">
+        <!-- Pillar 1 -->
+        <div class="gastro-card reveal-on-scroll reveal-delay-1">
+          <div class="gastro-img">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80" alt="Artisanal Cold Coffee & Beverages" loading="lazy">
+            <span class="gastro-tag">Cafe Bar</span>
+          </div>
+          <div class="gastro-body">
+            <h3>Artisanal Coffees & Shakes</h3>
+            <p>Velvety espresso shots, cold coffees crowned with vanilla cream, Belgian chocolate thick shakes, and exotic mojitos.</p>
+            <div class="gastro-highlights">
+              <span>Classic Cold Coffee</span>
+              <span>Hazelnut Cappuccino</span>
+              <span>Blue Lagoon</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="gastro-card reveal-on-scroll reveal-delay-2">
+          <div class="gastro-img">
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=700&q=80" alt="Wood-fired style pizzas and burgers" loading="lazy">
+            <span class="gastro-tag">Continental</span>
+          </div>
+          <div class="gastro-body">
+            <h3>Gourmet Pizzas & Burgers</h3>
+            <p>Loaded cheese burst crusts, herb garden farm toppings, grilled paneer supreme burgers, and crispy peri-peri fries.</p>
+            <div class="gastro-highlights">
+              <span>Amour Farmhouse</span>
+              <span>Paneer Tikka Pizza</span>
+              <span>Supreme Burger</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="gastro-card reveal-on-scroll reveal-delay-3">
+          <div class="gastro-img">
+            <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?auto=format&fit=crop&w=700&q=80" alt="Chilli Paneer and Chinese Starters" loading="lazy">
+            <span class="gastro-tag">Wok Specials</span>
+          </div>
+          <div class="gastro-body">
+            <h3>Sizzling Indo-Chinese</h3>
+            <p>Wok-tossed Hakka noodles, golden crispy Chilli Paneer, Manchurian bowls, and honey chilli potatoes brimming with aroma.</p>
+            <div class="gastro-highlights">
+              <span>Chilli Paneer Dry</span>
+              <span>Veg Hakka Noodles</span>
+              <span>Crispy Manchurian</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="gastro-card reveal-on-scroll reveal-delay-4">
+          <div class="gastro-img">
+            <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=700&q=80" alt="Royal North Indian Curries and Biryani" loading="lazy">
+            <span class="gastro-tag">Indian Heritage</span>
+          </div>
+          <div class="gastro-body">
+            <h3>Royal North Indian Curries</h3>
+            <p>Rich Paneer Butter Masala, overnight slow-cooked Dal Makhani, clay-tandoor Butter Garlic Naan, and aromatic Dum Biryani.</p>
+            <div class="gastro-highlights">
+              <span>Paneer Butter Masala</span>
+              <span>Dal Makhani Handi</span>
+              <span>Butter Garlic Naan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Culinary Consultation Banner -->
+      <div class="gastronomy-banner">
+        <div class="banner-text">
+          <i class="fa-solid fa-utensils text-gold"></i>
+          <div>
+            <h3>Dietary Preferences or Special Pre-Orders?</h3>
+            <p>Our chef customizes preparations for Jain dining, mild spice for children, or festive party feasts.</p>
+          </div>
+        </div>
+        <div class="banner-actions">
+          <a href="tel:+919999999999" class="btn btn-gold">
+            <i class="fa-solid fa-phone"></i> Call Chef Directly
+          </a>
+          <a href="https://wa.me/919999999999?text=Hello%20Amour%20Cafe,%20please%20share%20the%20digital%20menu%20card" target="_blank" class="btn btn-outline-gold">
+            <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atmosphere & Architectural Gallery -->
+  <section class="section gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="section-tag">ATMOSPHERE & SPACES</div>
+        <h2 class="section-title">Step Inside Amour Cafe & Restaurant</h2>
+        <p class="section-subtitle">
+          Authentic photography of our dining halls, private cabins, exterior entrance, and ambient lighting.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-on-scroll reveal-delay-1" onclick="openLightbox(0)">
+          <img src="images/hero_ambience.jpg" alt="Amour Cafe Restaurant Ambience" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <h4>Warm Ambient Lighting</h4>
+            <span>Main Dining Lounge</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll reveal-delay-2" onclick="openLightbox(1)">
+          <img src="images/private_cabin.jpg" alt="Private Dining Cabin Booth" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <h4>Private Dining Cabins</h4>
+            <span>Secluded Booths for Couples & Privacy</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll reveal-delay-3" onclick="openLightbox(2)">
+          <img src="images/interior_dining.jpg" alt="Interior Dining Arrangement" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <h4>Family Dining Hall</h4>
+            <span>Spacious & Refined Arrangement</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll reveal-delay-1" onclick="openLightbox(3)">
+          <img src="images/seating_lounge.jpg" alt="Seating Lounge Amour Cafe" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <h4>Lounge & Coffee Bar</h4>
+            <span>Contemporary Wooden Aesthetics</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll reveal-delay-2" onclick="openLightbox(4)">
+          <img src="images/exterior_signboard.jpg" alt="Amour Cafe Exterior Signboard" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <h4>Prominent Exterior Landmark</h4>
+            <span>Balpur Road, Near Power House</span>
+          </div>
+        </div>
+
+        <div class="gallery-item reveal-on-scroll reveal-delay-3" onclick="openLightbox(5)">
+          <img src="images/dining_area.jpg" alt="Comfortable Dining Arrangement" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-solid fa-expand"></i>
+            <h4>Dining Suites</h4>
+            <span>Gracious Hospitality</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Praise & Guest Reviews -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="section-tag">VERIFIED GUEST ENDORSEMENTS</div>
+        <h2 class="section-title">Celebrated by Guests across Deoria</h2>
+        <div class="reviews-score-badge">
+          <div class="score-stars">★★★★★</div>
+          <div class="score-text">
+            <strong>Flawless 5.0 / 5.0 Rating</strong>
+            <span>Verified across 203+ Reviews on Justdial & Google Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews-slider-track" id="reviewsTrack">
+        <!-- Review 1 -->
+        <div class="review-card reveal-on-scroll reveal-delay-1">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "The private cabin setup is genuinely unmatched in the region. Acoustic privacy, cozy warm lighting, and rapid service. The coffee and cheese burst pizza were phenomenal. A true gem in Tarkulwa."
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">AS</div>
+            <div class="reviewer-info">
+              <h5>Abhishek Singh</h5>
+              <span>Verified Patron • Private Cabin Diner</span>
+            </div>
+            <i class="fa-brands fa-google review-source-icon"></i>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card reveal-on-scroll reveal-delay-2">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "We planned an anniversary celebration at Amour Cafe. The team handled balloon decor, customized lighting, and background music gracefully. Paneer Tikka and Manchurian were top quality. Highly recommended!"
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">PK</div>
+            <div class="reviewer-info">
+              <h5>Pooja Kushwaha</h5>
+              <span>Verified Patron • Celebration Event</span>
+            </div>
+            <i class="fa-solid fa-certificate text-gold review-source-icon"></i>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card reveal-on-scroll reveal-delay-3">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">
+            "Finally a restaurant with metropolitan standards in Tarkulwa near Power House. Cleanliness is 10/10, the staff is very polite, and the Butter Garlic Naan with Dal Makhani is incredible."
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">RY</div>
+            <div class="reviewer-info">
+              <h5>Rahul Yadav</h5>
+              <span>Verified Patron • Family Feast</span>
+            </div>
+            <i class="fa-brands fa-google review-source-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="add-review-cta text-center reveal-on-scroll">
+        <p>Experienced Amour Cafe recently? Share your thoughts with our team.</p>
+        <button class="btn btn-outline-gold" onclick="openReviewModal()">
+          <i class="fa-regular fa-pen-to-square"></i> Submit Guest Feedback
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location, Map & Contact -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info-card reveal-on-scroll">
+          <div class="section-tag">FIND US</div>
+          <h2 class="section-title">Visit Amour Cafe & Restaurant</h2>
+          <p class="section-text">
+            Centrally situated on Balpur Road with ample parking space, easy access, and a warm welcoming staff.
+          </p>
+
+          <div class="contact-details-list">
+            <div class="contact-detail-item">
+              <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="detail-content">
+                <h4>Address & Landmark</h4>
+                <p>Balpur Shrinagar, Balpur Road, Near Power House, Tarkulwa, Deoria - 274408, Uttar Pradesh</p>
+                <span class="landmark-tag"><i class="fa-solid fa-landmark"></i> Prominent Landmark: Near Power House</span>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="detail-icon"><i class="fa-solid fa-clock"></i></div>
+              <div class="detail-content">
+                <h4>Hours of Operation</h4>
+                <p><strong>Monday through Sunday:</strong> 10:00 AM – 10:00 PM</p>
+                <div class="hours-badge" id="contactLiveBadge">
+                  <span class="live-dot pulse"></span> Open Today until 10:00 PM
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="detail-content">
+                <h4>Direct Contact & Inquiries</h4>
+                <p>For immediate reservations, party arrangements, or takeaway orders:</p>
+                <div class="phone-actions">
+                  <a href="tel:+919999999999" class="phone-link"><i class="fa-solid fa-phone"></i> +91 99999 99999</a>
+                  <a href="https://wa.me/919999999999?text=Hello%20Amour%20Cafe,%20I%20would%20like%20to%20inquire%20about%20a%20reservation" target="_blank" class="wa-chat-link">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Concierge
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-btn-row">
+            <a href="https://maps.google.com/?q=26.6374995,83.897364" target="_blank" class="btn btn-gold btn-block">
+              <i class="fa-solid fa-diamond-turn-right"></i> Open in Google Maps (Get Directions)
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded Interactive Map -->
+        <div class="contact-map-wrapper reveal-on-scroll reveal-delay-2">
+          <div class="map-card">
+            <div class="map-header">
+              <div class="map-title">
+                <i class="fa-solid fa-map-location-dot text-gold"></i>
+                <span>Tarkulwa, Deoria Landmark</span>
+              </div>
+              <span class="map-gps">26.6375° N, 83.8974° E</span>
+            </div>
+            <div class="map-iframe-container">
+              <iframe 
+                title="Amour Cafe & Restaurant Location Tarkulwa"
+                src="https://maps.google.com/maps?q=26.6374995,83.897364&hl=en&z=16&output=embed"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="map-footer">
+              <i class="fa-solid fa-square-parking text-gold"></i> Free Parking Available for Two-Wheelers & Cars
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated FAQs -->
+  <section class="section faq-section">
+    <div class="container">
+      <div class="section-header text-center reveal-on-scroll">
+        <div class="section-tag">ESSENTIAL INFORMATION</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Answers to common questions before your visit to Amour Cafe.</p>
+      </div>
+
+      <div class="faq-accordion" id="faqAccordion">
+        <div class="faq-item active">
+          <button class="faq-question">
+            <span>How do I reserve a Private Dining Cabin?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>You can reserve directly through our online reservation form or by connecting with our WhatsApp Concierge. Cabins are in high demand during evenings and weekends, so pre-booking 2–3 hours in advance is recommended.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can you host surprise birthday or anniversary parties?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes! We provide complete event setups including customized balloon decor, glowing LED letters, candlelight tables, celebratory music, and custom cake pre-orders.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are pure vegetarian choices available?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Yes. Amour Cafe & Restaurant offers an extensive pure vegetarian and vegan-friendly culinary repertoire, ranging from signature cottage cheese curries and dal makhani to gourmet veg pizzas, burgers, noodles, and beverages.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What are the business hours?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="faq-answer">
+            <p>We are open 7 days a week, Monday through Sunday, from <strong>10:00 AM to 10:00 PM</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="Amour Cafe Logo" class="brand-img" onerror="this.style.display='none'">
+          <div>
+            <h3>AMOUR</h3>
+            <span>CAFE & RESTAURANT</span>
+          </div>
+        </div>
+        <p class="footer-desc">
+          Tarkulwa’s highest rated dining sanctuary. Where romantic private cabins, artisanal coffee culture, and gourmet cuisine unite.
+        </p>
+        <div class="footer-rating-pill">
+          <span class="stars">★★★★★</span>
+          <span>5.0 / 5.0 (203+ Verified Reviews)</span>
+        </div>
+      </div>
+
+      <div class="footer-col links-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">Our Heritage</a></li>
+          <li><a href="#experiences">Private Cabins</a></li>
+          <li><a href="#gastronomy">Signature Gastronomy</a></li>
+          <li><a href="#gallery">Atmosphere & Spaces</a></li>
+          <li><a href="#reviews">Guest Praise</a></li>
+          <li><a href="#contact">Location & Maps</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col popular-col">
+        <h4>Experiences</h4>
+        <ul>
+          <li><a href="#experiences" onclick="openReservationModal('Private Dining Cabin')">Private Cabin Dining</a></li>
+          <li><a href="#experiences" onclick="openReservationModal('Birthday / Anniversary Setup')">Birthday Celebrations</a></li>
+          <li><a href="#experiences" onclick="openReservationModal('Family Lounge Table')">Family Banquets</a></li>
+          <li><a href="#gastronomy">Artisanal Cold Coffees</a></li>
+          <li><a href="#gastronomy">Chef's Signature Platters</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col contact-col">
+        <h4>Direct Concierge</h4>
+        <p><i class="fa-solid fa-location-dot text-gold"></i> Balpur Road, Near Power House, Tarkulwa, Deoria - 274408</p>
+        <p><i class="fa-solid fa-clock text-gold"></i> 10:00 AM – 10:00 PM (Monday – Sunday)</p>
+        <p><i class="fa-solid fa-phone text-gold"></i> <a href="tel:+919999999999">+91 99999 99999</a></p>
+        <div class="footer-social-row">
+          <a href="https://wa.me/919999999999" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://maps.google.com/?q=26.6374995,83.897364" target="_blank" aria-label="Google Maps"><i class="fa-solid fa-location-arrow"></i></a>
+          <a href="https://www.justdial.com/Deoria/Amour-Cafe-Restaurant-Near-Power-House-Tarkulwa/9999P5568-5568-250211125038-L9H3_BZDET" target="_blank" aria-label="Justdial Listing"><i class="fa-solid fa-star"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Amour Cafe & Restaurant. All Rights Reserved. Tarkulwa, Deoria, Uttar Pradesh.</p>
+        <p class="tagline-sub">Crafted for memorable moments.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Navigation / Quick Actions -->
+  <div class="mobile-action-bar">
+    <a href="tel:+919999999999" class="m-action-btn">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="https://wa.me/919999999999?text=Hello%20Amour%20Cafe,%20I%20would%20like%20to%20book%20a%20private%20cabin" target="_blank" class="m-action-btn m-action-wa">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <button class="m-action-btn m-action-gold" onclick="openReservationModal()">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book Cabin</span>
+    </button>
+    <a href="https://maps.google.com/?q=26.6374995,83.897364" target="_blank" class="m-action-btn">
+      <i class="fa-solid fa-location-arrow"></i>
+      <span>Map</span>
+    </a>
+  </div>
+
+  <!-- Floating Desktop WhatsApp Quick Chat -->
+  <a href="https://wa.me/919999999999?text=Hello%20Amour%20Cafe,%20I%20would%20like%20to%20inquire%20about%20a%20reservation" target="_blank" class="floating-wa-btn" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-tooltip">Reserve on WhatsApp</span>
+  </a>
+
+  <!-- Table & Cabin Reservation Concierge Modal -->
+  <div class="modal-overlay" id="reserveModal">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeReservationModal()" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <div class="section-tag">CONCIERGE RESERVATION</div>
+        <h3 id="modalTitle">Book Your Table or Private Cabin</h3>
+        <p>Complete the details below to secure your reservation instantly via WhatsApp.</p>
+      </div>
+
+      <form id="reservationForm" onsubmit="handleReservationSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resName"><i class="fa-solid fa-user"></i> Full Name *</label>
+            <input type="text" id="resName" required placeholder="e.g. Ratan Kumar">
+          </div>
+          <div class="form-group">
+            <label for="resPhone"><i class="fa-solid fa-phone"></i> Mobile Number *</label>
+            <input type="tel" id="resPhone" required placeholder="e.g. 9876543210">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resDate"><i class="fa-solid fa-calendar"></i> Date *</label>
+            <input type="date" id="resDate" required>
+          </div>
+          <div class="form-group">
+            <label for="resTime"><i class="fa-solid fa-clock"></i> Preferred Time *</label>
+            <select id="resTime" required>
+              <option value="">Select Time Slot</option>
+              <option value="11:00 AM">11:00 AM (Morning Coffee / Brunch)</option>
+              <option value="12:30 PM">12:30 PM (Lunch)</option>
+              <option value="02:00 PM">02:00 PM (Afternoon)</option>
+              <option value="04:30 PM">04:30 PM (Evening Snacks)</option>
+              <option value="06:00 PM">06:00 PM</option>
+              <option value="07:30 PM">07:30 PM (Dinner)</option>
+              <option value="08:30 PM">08:30 PM (Dinner)</option>
+              <option value="09:15 PM">09:15 PM (Late Evening)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="resGuests"><i class="fa-solid fa-users"></i> Guests *</label>
+            <select id="resGuests" required>
+              <option value="2 Guests (Couple)">2 Guests (Couple)</option>
+              <option value="3-4 Guests">3-4 Guests (Small Group)</option>
+              <option value="5-8 Guests">5-8 Guests (Family / Friends)</option>
+              <option value="10+ Guests">10+ Guests (Celebration Party)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="resType"><i class="fa-solid fa-couch"></i> Seating Preference *</label>
+            <select id="resType" required>
+              <option value="Private Dining Cabin">⭐ Private Dining Cabin</option>
+              <option value="Main Dining Hall Table">Main Dining Hall Table</option>
+              <option value="Birthday / Anniversary Decor Setup">🎉 Birthday / Anniversary Decor Setup</option>
+              <option value="Family Lounge Area">Family Lounge Area</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="resNotes"><i class="fa-solid fa-message"></i> Special Requests (Optional)</label>
+          <textarea id="resNotes" rows="2" placeholder="e.g. Anniversary surprise, quiet cabin, birthday cake arrangements..."></textarea>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-glass" onclick="closeReservationModal()">Cancel</button>
+          <button type="submit" class="btn btn-gold">
+            <i class="fa-brands fa-whatsapp"></i> Confirm via WhatsApp
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Photo Lightbox -->
+  <div class="lightbox-overlay" id="lightboxModal">
+    <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+    <button class="lightbox-prev" onclick="changeLightbox(-1)">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Amour Cafe Gallery Image">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+    <button class="lightbox-next" onclick="changeLightbox(1)">&#10095;</button>
+  </div>
+
+  <!-- Review Modal -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeReviewModal()">&times;</button>
+      <div class="modal-header">
+        <div class="section-tag">GUEST FEEDBACK</div>
+        <h3>Share Your Experience</h3>
+        <p>Your review helps us uphold our 5.0-star dining standards.</p>
+      </div>
+      <form onsubmit="handleReviewSubmit(event)">
+        <div class="form-group text-center">
+          <label>Your Rating</label>
+          <div class="star-rating-select">
+            <span class="star-opt active" onclick="selectStar(1)">★</span>
+            <span class="star-opt active" onclick="selectStar(2)">★</span>
+            <span class="star-opt active" onclick="selectStar(3)">★</span>
+            <span class="star-opt active" onclick="selectStar(4)">★</span>
+            <span class="star-opt active" onclick="selectStar(5)">★</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="revAuthor">Your Name</label>
+          <input type="text" id="revAuthor" required placeholder="e.g. Vikas Upadhyay">
+        </div>
+        <div class="form-group">
+          <label for="revComment">Review Details</label>
+          <textarea id="revComment" rows="3" required placeholder="How did you enjoy the ambience, private cabin, food, and hospitality?"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-glass" onclick="closeReviewModal()">Cancel</button>
+          <button type="submit" class="btn btn-gold">Submit Review</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check text-gold" id="toastIcon"></i>
+    <span id="toastMessage">Action completed!</span>
+  </div>
+
+  <!-- AOS Animation Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js?v=8.0"></script>
+</body>
+</html>
