@@ -9,7 +9,7 @@
   <meta name="description" content="Experience romantic private cabins, gourmet cuisine, and artisanal coffee at Amour Cafe & Restaurant, Balpur Road, Tarkulwa, Deoria. Rated 5.0★ with 200+ reviews.">
   <meta name="keywords" content="Amour Cafe, Amour Restaurant Tarkulwa, Private cabin cafe Tarkulwa, Restaurant near Power House Tarkulwa, Birthday party restaurant Deoria, Fine dining Tarkulwa">
   <meta name="author" content="Amour Cafe & Restaurant">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#070b16">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Amour Cafe & Restaurant | Tarkulwa, Deoria">
@@ -20,10 +20,10 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="images/logo.jpg">
 
-  <!-- Google Typography -->
+  <!-- Google Typography: Poppins (Portfolio font) + Cinzel & Playfair -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
   <!-- Cache-Busted Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=8.0">
+  <link rel="stylesheet" href="styles.css?v=9.6">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -79,7 +79,7 @@
   }
   </script>
 </head>
-<body class="light-theme">
+<body class="dark-theme">
 
   <!-- Header Navigation -->
   <header class="navbar" id="navbar">
@@ -115,7 +115,7 @@
     </div>
   </header>
 
-  <!-- Hero Section with Ambient Cinematic Video Background -->
+  <!-- Hero Section with Ambient Cinematic Video Background & Cosmic Glow -->
   <section class="hero-section" id="hero">
     <!-- Video Background Container -->
     <div class="hero-video-wrapper">
@@ -139,21 +139,28 @@
     </button>
 
     <div class="container hero-content">
-      <div class="hero-badge-pill">
+      <div class="hero-badge-pill" data-aos="fade-down" data-aos-duration="700">
         <i class="fa-solid fa-crown text-gold"></i>
         <span>Tarkulwa's Premier Dining Sanctuary • 5.0★ Rated</span>
       </div>
 
-      <h1 class="hero-title">
+      <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
         Where Romance, Elegance & <span class="gold-gradient">Flavor Converge</span>
       </h1>
 
-      <p class="hero-description">
+      <!-- Portfolio Typewriter Text Feature -->
+      <div class="hero-typing-wrap" data-aos="fade-up" data-aos-delay="150">
+        <span class="typing-prefix">Discover</span>
+        <span class="typing-text-accent" id="heroTypingText">Romantic Private Cabins</span>
+        <span class="typing-cursor"></span>
+      </div>
+
+      <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
         Step into Tarkulwa's most distinguished dining destination. Experience intimate private cabins, celebration banquets, artisanal coffees, and mastercrafted cuisine.
       </p>
 
       <!-- Highlights (Responsive 2x2 grid on mobile) -->
-      <div class="hero-highlights">
+      <div class="hero-highlights" data-aos="fade-up" data-aos-delay="250">
         <div class="highlight-item">
           <i class="fa-solid fa-heart"></i>
           <span>Private Cabins</span>
@@ -172,8 +179,18 @@
         </div>
       </div>
 
+      <!-- Hero Call To Action Buttons (Indigo-Cyan Gradient & Glow) -->
+      <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+        <button class="btn btn-gold btn-lg" onclick="openReservationModal()">
+          <i class="fa-solid fa-calendar-check"></i> <span>Book Table & Cabins</span>
+        </button>
+        <a href="#experiences" class="btn btn-outline-light btn-lg">
+          <i class="fa-solid fa-sparkles"></i> <span>Explore Experiences</span>
+        </a>
+      </div>
+
       <!-- Prestige Stats Grid -->
-      <div class="hero-stats">
+      <div class="hero-stats" data-aos="zoom-in" data-aos-delay="350">
         <div class="stat-box">
           <span class="stat-number">5.0<small>★</small></span>
           <span class="stat-label">Google Rating</span>
@@ -197,8 +214,9 @@
     </div>
   </section>
 
-  <!-- Heritage & Philosophy Section (Clean White) -->
+  <!-- Heritage & Philosophy Section -->
   <section class="section about-section" id="about">
+    <div class="ambient-glow ambient-glow-cyan" style="top: 15%; right: -60px; width: 420px; height: 420px;"></div>
     <div class="container">
       <div class="about-grid">
         <div class="about-images-wrapper reveal-on-scroll">
@@ -219,7 +237,7 @@
 
         <div class="about-content reveal-on-scroll reveal-delay-2">
           <div class="section-tag">OUR PHILOSOPHY</div>
-          <h2 class="section-title">A Symphony of Warmth, Privacy & Fine Gastronomy</h2>
+          <h2 class="section-title">A Symphony of <span class="text-gradient-cyan">Warmth, Privacy</span> &amp; <span class="text-gradient-gold">Fine Gastronomy</span></h2>
           <p class="section-text">
             Conceived as an oasis of refined dining on Balpur Road near the Power House, <strong>Amour Cafe & Restaurant</strong> brings metropolitan cafe elegance and royal North Indian culinary heritage to Tarkulwa.
           </p>
@@ -270,10 +288,11 @@
 
   <!-- Curated Experiences (Cabins, Parties, Family Lounge) -->
   <section class="section experiences-section" id="experiences">
+    <div class="ambient-glow ambient-glow-indigo" style="top: 10%; left: -60px; width: 440px; height: 440px;"></div>
     <div class="container">
       <div class="section-header text-center reveal-on-scroll">
         <div class="section-tag">CURATED EXPERIENCES</div>
-        <h2 class="section-title">Designed for Every Memorable Occasion</h2>
+        <h2 class="section-title">Designed for Every <span class="text-gradient-cyan">Memorable Occasion</span></h2>
         <p class="section-subtitle">
           From tranquil privacy for couples to grand festive setups for birthdays and anniversaries.
         </p>
@@ -345,10 +364,11 @@
 
   <!-- Signature Gastronomy (Editorial Showcase of Culinary Pillars) -->
   <section class="section gastronomy-section" id="gastronomy">
+    <div class="ambient-glow ambient-glow-cyan" style="bottom: 10%; right: -60px; width: 440px; height: 440px;"></div>
     <div class="container">
       <div class="section-header text-center reveal-on-scroll">
         <div class="section-tag">CULINARY EXCELLENCE</div>
-        <h2 class="section-title">The Amour Gastronomy Collection</h2>
+        <h2 class="section-title">The Amour <span class="text-gradient-gold">Gastronomy Collection</span></h2>
         <p class="section-subtitle">
           A masterclass in taste and hygiene. Crafted fresh with uncompromised ingredients and culinary passion.
         </p>
@@ -450,7 +470,7 @@
     <div class="container">
       <div class="section-header text-center reveal-on-scroll">
         <div class="section-tag">ATMOSPHERE & SPACES</div>
-        <h2 class="section-title">Step Inside Amour Cafe & Restaurant</h2>
+        <h2 class="section-title">Step Inside <span class="text-gradient-cyan">Amour Cafe &amp; Restaurant</span></h2>
         <p class="section-subtitle">
           Authentic photography of our dining halls, private cabins, exterior entrance, and ambient lighting.
         </p>
@@ -516,10 +536,11 @@
 
   <!-- Praise & Guest Reviews -->
   <section class="section reviews-section" id="reviews">
+    <div class="ambient-glow ambient-glow-indigo" style="top: 20%; left: 5%; width: 400px; height: 400px;"></div>
     <div class="container">
       <div class="section-header text-center reveal-on-scroll">
         <div class="section-tag">VERIFIED GUEST ENDORSEMENTS</div>
-        <h2 class="section-title">Celebrated by Guests across Deoria</h2>
+        <h2 class="section-title">Celebrated by Guests across <span class="text-gradient-cyan">Deoria</span></h2>
         <div class="reviews-score-badge">
           <div class="score-stars">★★★★★</div>
           <div class="score-text">
@@ -590,12 +611,13 @@
 
   <!-- Location, Map & Contact -->
   <section class="section contact-section" id="contact">
+    <div class="ambient-glow ambient-glow-cyan" style="bottom: 5%; right: 5%; width: 420px; height: 420px;"></div>
     <div class="container">
       <div class="contact-grid">
         <!-- Contact Information -->
         <div class="contact-info-card reveal-on-scroll">
           <div class="section-tag">FIND US</div>
-          <h2 class="section-title">Visit Amour Cafe & Restaurant</h2>
+          <h2 class="section-title">Visit <span class="text-gradient-cyan">Amour Cafe &amp; Restaurant</span></h2>
           <p class="section-text">
             Centrally situated on Balpur Road with ample parking space, easy access, and a warm welcoming staff.
           </p>
@@ -643,30 +665,13 @@
           </div>
         </div>
 
-        <!-- Embedded Interactive Map -->
-        <div class="contact-map-wrapper reveal-on-scroll reveal-delay-2">
-          <div class="map-card">
-            <div class="map-header">
-              <div class="map-title">
-                <i class="fa-solid fa-map-location-dot text-gold"></i>
-                <span>Tarkulwa, Deoria Landmark</span>
-              </div>
-              <span class="map-gps">26.6375° N, 83.8974° E</span>
-            </div>
-            <div class="map-iframe-container">
-              <iframe 
-                title="Amour Cafe & Restaurant Location Tarkulwa"
-                src="https://maps.google.com/maps?q=26.6374995,83.897364&hl=en&z=16&output=embed"
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
-            <div class="map-footer">
-              <i class="fa-solid fa-square-parking text-gold"></i> Free Parking Available for Two-Wheelers & Cars
+        <!-- 3D Interactive Realistic Earth Globe (Borderless & Free-Floating like Portfolio) -->
+        <div class="contact-earth-wrapper reveal-on-scroll reveal-delay-2">
+          <div class="earth-canvas-container" id="earthCanvasContainer">
+            <!-- Loading Spinner -->
+            <div class="earth-loading" id="earthLoadingSpinner">
+              <div class="earth-spinner"></div>
+              <span>Loading 3D Earth...</span>
             </div>
           </div>
         </div>
@@ -679,7 +684,7 @@
     <div class="container">
       <div class="section-header text-center reveal-on-scroll">
         <div class="section-tag">ESSENTIAL INFORMATION</div>
-        <h2 class="section-title">Frequently Asked Questions</h2>
+        <h2 class="section-title"><span class="text-gradient-cyan">Frequently Asked</span> Questions</h2>
         <p class="section-subtitle">Answers to common questions before your visit to Amour Cafe.</p>
       </div>
 
@@ -950,8 +955,11 @@
     <span id="toastMessage">Action completed!</span>
   </div>
 
+  <!-- Three.js & OrbitControls for 3D Earth Globe -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   <!-- AOS Animation Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <script src="script.js?v=8.0"></script>
+  <script src="script.js?v=9.6"></script>
 </body>
 </html>
